@@ -8,7 +8,7 @@ while( num1 < 4000000) {
         sum += num1;
     }
 
-    //update a and b through each while iteration, ex 1st iteration through:
+    //update a and b through each while iteration, ex. for 1st iteration through:
     let num3 = num1 + num2; // 3 = 1 + 2
     num1 = num2; // 1 = 2, now
     num2 = num3; // 2 = 3, now
