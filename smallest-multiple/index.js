@@ -8,6 +8,7 @@ function smallestMultiple(){
     i+= 2520;
     let isDivisible = true;
 
+    //b/c 11-20 is divisible by same numbers as 1-10
     for(let j=11; j<=20; j++){
       console.log(i, j)
       if (i%j != 0){
