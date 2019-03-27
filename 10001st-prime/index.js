@@ -1,5 +1,5 @@
 function isPrime(num) {
-  //checks if num can be divided by any even numbers its false except 2
+  //checks if num can be divided by any even numbers its false except 2 
   for(let i = 2; i < num; i++) {
     if(num % i === 0) {
       return false
