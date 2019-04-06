@@ -9,15 +9,13 @@ function palindomeChecker(string) {
   //regular expression
   // (/)signifies start of regex expression, [\W] bracket with \W matches all non-alphanumeric values,
   // added _ after \W to match underscores as well, /g global refers to the whole string
-  let reg = /[\W_]/g
+  let regex = /[\W_]/g
 
   //replace takes in 2 arguments, first is pattern you want to match (reg here) and 2nd is what you want
   //to replace it with "" (nothing) b/c you want to remove those characters from string
-  let regString = string.toLowerCase().replace(reg, "")
-  console.log(regString)
-  let palin = regString.split('').reverse().join('')
-  console.log(palin)
-  if(palin === regString) {
+  let regexString = string.toLowerCase().replace(regex, "")
+  let palin = regexString.split('').reverse().join('')
+  if(palin === regexString) {
     return true
   } else {
     return false
