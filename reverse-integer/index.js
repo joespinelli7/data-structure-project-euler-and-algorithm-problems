@@ -8,10 +8,6 @@
 //  reverseInt(-90) === -9
 
 function reverseInt(n) {
-  let reversedString = n.toString().split('').reverse().join('')
-  if (reversedString.includes("-")) {
-    return -parseInt(reversedString)
-  } else {
-    return parseInt(reversedString)
-  }
+  let reversedString = n.toString().split('').reverse().join('');
+  return parseInt(reversedString) * Math.sign(n);
 }
