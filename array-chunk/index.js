@@ -8,14 +8,12 @@
 
 function arrayChunk(array, size) {
   let chunkedArray = [];
+  let index = 0;
 
-  for (let element of array ) {
-    let last = chunkedArray[chunkedArray.length - 1];
-    if(!last || last.length === size) {
-      chunkedArray.push([element])
-    } else {
-      last.push(element)
-    }
+  while (index < array.length) {
+    let subArr = array.slice(index, index + size);
+    chunkedArray.push(subArr);
+    index += size;
   }
-  return chunkedArray
+  return chunkedArray;
 }
