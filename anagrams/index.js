@@ -6,11 +6,21 @@
 // anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 // anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {
-  let newStringA = stringA.replace(/[^\w]/g, '').toLowerCase();
-  let newStringB = stringB.replace(/[^\w]/g, '').toLowerCase();
+// first attempt:
+// function anagrams(stringA, stringB) {
+//   let newStringA = stringA.replace(/[^\w]/g, '').toLowerCase();
+//   let newStringB = stringB.replace(/[^\w]/g, '').toLowerCase();
+//
+//   let finalStringA = newStringA.split('').sort().join('');
+//   let finalStringB = newStringB.split('').sort().join('');
+//   return finalStringA === finalStringB;
+// }
 
-  let finalStringA = newStringA.split('').sort().join('');
-  let finalStringB = newStringB.split('').sort().join('');
-  return finalStringA === finalStringB;
+//better version:
+function anagrams(stringA, stringB) {
+  return cleanStr(stringA) === cleanStr(stringB)
+}
+
+function cleanStr(str) {
+  return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
