@@ -6,11 +6,11 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const vowelList = ['a', 'e', 'i', 'o', 'u'];
   let vowelArray = [];
 
   str.toLowerCase().split('').map( letter => {
-    (vowels.includes(letter) ? vowelArray.push(letter) : null)
+    (vowelList.includes(letter) ? vowelArray.push(letter) : null)
   })
   return vowelArray.length
 }
