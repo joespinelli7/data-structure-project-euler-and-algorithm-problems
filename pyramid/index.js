@@ -26,7 +26,7 @@ function pyramid(n) {
     } else if (numberOfSpaces > 1 && i > 1) {
       console.log(emptySpace.repeat(numberOfSpaces) + string + addToString.repeat(i - 1) + emptySpace.repeat(numberOfSpaces))
     } else if (numberOfSpaces === 1) {
-      console.log(emptySpace.repeat(numberOfSpaces) + string + addToString.repeat(n-2) + emptySpace.repeat(numberOfSpaces))
+      console.log(emptySpace.repeat(numberOfSpaces) + string + addToString.repeat(n - 2) + emptySpace.repeat(numberOfSpaces))
     } else {
       console.log(string + addToString.repeat(n - 1))
     }
