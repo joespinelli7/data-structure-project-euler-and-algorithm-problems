@@ -14,12 +14,12 @@
 function pyramid(n) {
   (n <= 0 ? alert("Positive numbers only!") : null);
   let string = "#";
-  let addToString = "##"
+  let addToString = "##";
   let emptySpace = " ";
 
   for(let i = 1; i <= n; i++) {
     let numberOfSpaces = n - i;
-    
+
     if (numberOfSpaces > 1 && i === 1) {
       console.log(emptySpace.repeat(numberOfSpaces) + string.repeat(i) + emptySpace.repeat(numberOfSpaces))
     } else if (numberOfSpaces > 1 && i > 1) {
