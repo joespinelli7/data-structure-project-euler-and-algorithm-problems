@@ -19,8 +19,7 @@ function pyramid(n) {
 
   for(let i = 1; i <= n; i++) {
     let numberOfSpaces = n - i;
-    let counter;
-
+    
     if (numberOfSpaces > 1 && i === 1) {
       console.log(emptySpace.repeat(numberOfSpaces) + string.repeat(i) + emptySpace.repeat(numberOfSpaces))
     } else if (numberOfSpaces > 1 && i > 1) {
