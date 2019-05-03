@@ -5,10 +5,11 @@ function reverseString(string) {
 }
 
 //using no built in methods
-function reverseString(string) {
-  let final = ""
-  for (let i = string.length - 1; i >= 0; i--) {
-    final += string[i]
+function reverse(str) {
+  let reversed = "";
+
+  for(let character of str) {
+    reversed = character + reversed
   }
-  return final
+  return reversed;
 }
