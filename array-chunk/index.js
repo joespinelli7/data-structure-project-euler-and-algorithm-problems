@@ -17,3 +17,17 @@ function arrayChunk(array, size) {
   }
   return chunkedArray;
 }
+
+// this solution also sorts the numbers by lowest to highest inside the sub arrays:
+function chunk(array, size) {
+  let chunkedArray = [];
+  let index = 0;
+
+  while(index < array.length) {
+    let subArray = array.sort((a, b) => {return a - b}).slice(index, index + size);
+    chunkedArray.push(subArray);
+    index += size
+  }
+
+  return chunkedArray;
+}
