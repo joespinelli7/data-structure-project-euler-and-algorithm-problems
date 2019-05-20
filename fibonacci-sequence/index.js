@@ -7,5 +7,15 @@
 //   fib(4) === 3
 
 function fib(n) {
-  
+  const result = [0, 1];
+
+  for(let i = 2; i <= n; i++) {
+    const prevNum1 = result[result.length - 1];
+    const prevNum2 = result[result.length - 2];
+
+    result.push(prevNum1 + prevNum2);
+  }
+  return result[n];
 }
+
+// can also use result[result.length - 1] to grab last element of array(desired result)
