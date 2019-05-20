@@ -9,7 +9,7 @@
 function fib(n) {
   const result = [0, 1];
 
-  // let i = 2 b/c taking care of first 2 indexes [0], [1[] of array when declaring const result
+  // let i = 2 b/c taking care of first 2 indexes [0], [1] of array when declaring const result
   for(let i = 2; i <= n; i++) {
     const prevNum1 = result[result.length - 1];
     const prevNum2 = result[result.length - 2];
