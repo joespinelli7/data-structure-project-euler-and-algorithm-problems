@@ -18,5 +18,12 @@ function fib(n) {
   }
   return result[n];
 }
-
 // can also use result[result.length - 1] to grab last element of array(desired result)
+
+// Recursive solution:
+// function fib(n) {
+//   (n < 0 ? alert('Number inputted must be greater than or equal to 0') : null)
+//   if(n <= 1) {return n}
+//
+//   return fib(n - 1) + fib(n - 2)
+// }
