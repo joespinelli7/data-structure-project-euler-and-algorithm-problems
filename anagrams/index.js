@@ -16,7 +16,7 @@
 //   return finalStringA === finalStringB;
 // }
 
-//better version:
+//better (revised) version:
 function anagrams(stringA, stringB) {
   return cleanStr(stringA) === cleanStr(stringB)
 }
