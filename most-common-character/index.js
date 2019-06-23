@@ -3,20 +3,20 @@
 // commonCharacter("abcccccccd") === "c"
 // commonCharacter("apple 1231111") === "1"
 
-function commonCharacter(str) {
-  let characterCounterObject = {};
-  let largestNum = 0;
-  let mostCommonChar = "";
+function maxChar(str) {
+  let characterCounter = {};
+  let highestN = 0;
+  let maxC = "";
 
   for (let char of str) {
-    (!characterCounterObject[char] ? characterCounterObject[char] = 1 : characterCounterObject[char]++)
+    (characterCounter[char] ? characterCounter[char]++ : characterCounter[char] = 1)
   }
 
-  for (let char in characterCounterObject) {
-    if (characterCounterObject[char] > largestNum) {
-      largestNum = characterCounterObject[char];
-      mostCommonChar = char;
+  for (let char in characterCounter) {
+    if (characterCounter[char] > highestN) {
+      highestN = characterCounter[char];
+      maxC = char;
     }
   }
-  return mostCommonChar
+  return maxC;
 }
