@@ -12,3 +12,19 @@ function capitalize(str) {
   })
   .join(' ');
 }
+
+// alternative solution:
+// function capitalize(str) {
+//   const capArr = str.split(' ');
+//   let capSentence = '';
+//   let finalArr = [];
+//
+//   for(let element of capArr) {
+//     let firstChar = element.slice(0, 1).toUpperCase();
+//     let restOfStr = element.slice(1);
+//
+//     let newStr = firstChar + restOfStr;
+//     finalArr.push(newStr);
+//   }
+//   return finalArr.join(' ');
+// }
