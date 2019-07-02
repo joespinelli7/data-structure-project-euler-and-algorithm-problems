@@ -16,16 +16,16 @@
 
 function steps(n) {
   (n <= 0 ? alert("Only positive numbers allowed!") : null)
-  let string = "#";
-  let emptySpace = " ";
+  let step = '#';
+  let space = ' ';
 
-  for(let i = 1; i <= n; i++) {
-    let numberOfSpaces = n - i;
-
-    if (numberOfSpaces >= 1) {
-        console.log(string.repeat(i) + emptySpace.repeat(numberOfSpaces));
+  for(let i = 1; i <= n; i++){
+    let numOfSpaces = n - i;
+    if(numOfSpaces < n) {
+      console.log(step.repeat(i) + space.repeat(numOfSpaces));
     } else {
-      console.log(string.repeat(i));
+      console.log(step.repeat(i));
     }
   }
+  
 }
