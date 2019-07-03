@@ -20,7 +20,7 @@ function pyramid(n) {
   for (let i = 1; i <= n; i++) {
     let numOfSpaces = n - i;
 
-    if (numOfSpaces > 0 ) {
+    if (numOfSpaces > 0) {
       console.log(space.repeat(numOfSpaces) + hash.repeat((i * 2) - 1) + space.repeat(numOfSpaces));
     } else {
       console.log(hash.repeat((n * 2) - 1));
