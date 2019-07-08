@@ -17,7 +17,7 @@ function vowels(str) {
   return counter;
 }
 
-// Old version:
+// Older version:
 // function vowels(str) {
 //   const vowelList = ['a', 'e', 'i', 'o', 'u'];
 //   let vowelArray = [];
