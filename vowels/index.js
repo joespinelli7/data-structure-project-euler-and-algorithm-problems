@@ -7,13 +7,13 @@
 
 // Improved version:
 function vowels(str) {
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const vowelsArr = ['a', 'e', 'i', 'o', 'u'];
   let counter = 0;
 
-  let strArr = str.toLowerCase().split('');
-  strArr.forEach(letter => {
-    vowels.includes(letter) ? counter++ : null;
-  })
+  for(let char of str) {
+    vowelsArr.includes(char.toLowerCase()) ? counter++ : null;
+  }
+
   return counter;
 }
 
