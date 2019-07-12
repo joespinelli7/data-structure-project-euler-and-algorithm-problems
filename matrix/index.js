@@ -15,10 +15,10 @@
 
 function matrix(n) {
   //create an empty array of arrays
-  const results = [];
+  const outerArray = [];
 
   for (let i = 0; i < n; i++) {
-    results.push([]);
+    outerArray.push([]);
   }
 
   //create counter variable starting at 1
@@ -33,8 +33,8 @@ function matrix(n) {
   while (startColumn <= endColumn && startRow <= endRow) {
     //top row, looping from start column to end column
     for (let i = startColumn; i <= endColumn; i++) {
-      //inside loop at every step assign some value to results array
-      results[startRow][i] = counter;
+      //inside loop at every step assign some value to outerArray array
+      outerArray[startRow][i] = counter;
       counter++;
     }
     //increment start row to move onto next subarray
@@ -42,25 +42,25 @@ function matrix(n) {
 
     //right column, loop front start to end row
     for (let i = startRow; i <= endRow; i++) {
-      results[i][endColumn] = counter;
+      outerArray[i][endColumn] = counter;
       counter++;
     }
     endColumn--;
 
     //botton row,
     for (let i = endColumn; i >= startColumn; i--) {
-      results[endRow][i] = counter;
+      outerArray[endRow][i] = counter;
       counter++;
     }
     endRow--;
 
     //start column
     for (let i = endRow; i >= startRow; i--) {
-      results[i][startColumn] = counter;
+      outerArray[i][startColumn] = counter;
       counter++;
     }
     startColumn++;
   }
 
-  return results;
+  return outerArray;
 }
