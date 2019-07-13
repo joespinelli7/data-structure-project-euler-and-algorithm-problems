@@ -15,10 +15,10 @@
 
 function matrix(n) {
   //create an empty array of arrays
-  const outerArray = [];
+  const arrayOfArrays = [];
 
   for (let i = 0; i < n; i++) {
-    outerArray.push([]);
+    arrayOfArrays.push([]);
   }
 
   //create counter variable starting at 1
@@ -33,8 +33,8 @@ function matrix(n) {
   while (startColumn <= endColumn && startRow <= endRow) {
     //top row, looping from start column to end column
     for (let i = startColumn; i <= endColumn; i++) {
-      //inside loop at every step assign some value to outerArray array
-      outerArray[startRow][i] = counter;
+      //inside loop at every step assign some value to arrayOfArrays array
+      arrayOfArrays[startRow][i] = counter;
       counter++;
     }
     //increment start row to move onto next subarray
@@ -42,25 +42,25 @@ function matrix(n) {
 
     //right column, loop front start to end row
     for (let i = startRow; i <= endRow; i++) {
-      outerArray[i][endColumn] = counter;
+      arrayOfArrays[i][endColumn] = counter;
       counter++;
     }
     endColumn--;
 
     //botton row,
     for (let i = endColumn; i >= startColumn; i--) {
-      outerArray[endRow][i] = counter;
+      arrayOfArrays[endRow][i] = counter;
       counter++;
     }
     endRow--;
 
     //start column
     for (let i = endRow; i >= startRow; i--) {
-      outerArray[i][startColumn] = counter;
+      arrayOfArrays[i][startColumn] = counter;
       counter++;
     }
     startColumn++;
   }
 
-  return outerArray;
+  return arrayOfArrays;
 }
