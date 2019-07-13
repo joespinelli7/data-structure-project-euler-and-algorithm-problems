@@ -33,7 +33,7 @@ function matrix(n) {
   while (startColumn <= endColumn && startRow <= endRow) {
     //top row, looping from start column to end column
     for (let i = startColumn; i <= endColumn; i++) {
-      //inside loop at every step assign some value to arrayOfArrays array
+      //inside loop at every step assign some value to subarray
       arrayOfArrays[startRow][i] = counter;
       counter++;
     }
@@ -47,7 +47,7 @@ function matrix(n) {
     }
     endColumn--;
 
-    //botton row,
+    //botton row
     for (let i = endColumn; i >= startColumn; i--) {
       arrayOfArrays[endRow][i] = counter;
       counter++;
