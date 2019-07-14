@@ -6,17 +6,16 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {
-  const result = [0, 1];
+function fibonacci(n) {
+  let fibArray = [0, 1];
 
   // let i = 2 b/c taking care of first 2 indexes [0], [1] of array when declaring const result
   for(let i = 2; i <= n; i++) {
-    const prevNum1 = result[result.length - 1];
-    const prevNum2 = result[result.length - 2];
-
-    result.push(prevNum1 + prevNum2);
+    let newFib = fibArray[i - 1] + fibArray[i - 2];
+    fibArray.push(newFib);
   }
-  return result[n];
+
+  return fibArray[n];
 }
 // can also use result[result.length - 1] to grab last element of array(desired result)
 
