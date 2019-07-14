@@ -14,8 +14,8 @@
 // Improved solution:
 function pyramid(n) {
   n > 0 ? null : alert("Positive numbers only!");
-  let hash = '#';
-  let space = ' ';
+  const hash = '#';
+  const space = ' ';
 
   for (let i = 1; i <= n; i++) {
     let numOfSpaces = n - i;
