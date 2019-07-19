@@ -10,8 +10,8 @@ function vowels(str) {
   const vowelsArr = ['a', 'e', 'i', 'o', 'u'];
   let counter = 0;
 
-  for(let char of str) {
-    vowelsArr.includes(char.toLowerCase()) ? counter++ : null;
+  for(let element of str) {
+    vowelsArr.includes(element.toLowerCase()) ? counter++ : null;
   }
 
   return counter;
