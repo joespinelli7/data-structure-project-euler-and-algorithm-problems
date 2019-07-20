@@ -8,14 +8,14 @@
 
 class Queue {
   constructor() {
-    this.data = [];
+    this.array = [];
   }
 
   add(record) {
-    this.data.unshift(record);
+    this.array.unshift(record);
   }
 
   remove() {
-    return this.data.pop();
+    return this.array.pop();
   }
 }
