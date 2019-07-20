@@ -21,11 +21,13 @@
 const Queue = require('./queue');
 
 function weave(sourceOne, sourceTwo) {
-  const qNew = new Queue();
+  const newQ = new Queue();
 
   while(sourceOne.peek() || sourceTwo.peek()) {
-    (sourceOne.peek() ? qNew.add(sourceOne.remove()) : null);
-    (sourceTwo.peek() ? qNew.add(sourceTwos.remove()) : null);
+    // here checking if source still has an element and if so removing it from original source and adding it to
+    // front of combined queue which is holding both original source queues
+    (sourceOne.peek() ? newQ.add(sourceOne.remove()) : null);
+    (sourceTwo.peek() ? newQ.add(sourceTwos.remove()) : null);
   }
-  return qNew;
+  return newQ;
 }
