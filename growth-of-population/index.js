@@ -7,7 +7,7 @@
 // How many years does the town need to see its population greater or equal to p = 1200 inhabitants? (answer would be 3)
 
 function nbYear(p0, percent, inhab, p){
-  let percentNum = (percent / 100);
+  const percentNum = (percent / 100);
   let years = 0;
 
   while (p0 <= p) {
