@@ -10,7 +10,7 @@ function nbYear(p0, percent, inhab, p){
   const percentNum = (percent / 100);
   let years = 0;
 
-  while (p0 <= p) {
+  while (p0 < p) {
     let newPop = p0 + (p0 * percentNum) + inhab;
     p0 = Math.floor(newPop);
     years++;
