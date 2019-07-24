@@ -3,8 +3,7 @@
 // The binary number returned should be a string.
 
 function addBinary(a,b) {
-  const binaryA = a.toString(2);
-  const binaryB = b.toString(2);
-  const addition = (+binaryA) + (+binaryB);
-  return addition.toString();
+  const binaryA = parseInt(a.toString(2));
+  const binaryB = parseInt(b.toString(2));
+  return (binaryA + binaryB).toString();
 }
