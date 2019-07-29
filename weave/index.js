@@ -27,7 +27,7 @@ function weave(sourceOne, sourceTwo) {
     // here checking if source still has an element and if so removing it from original source and adding it to
     // front of combined queue which is holding both original source queues
     (sourceOne.peek() ? newQ.add(sourceOne.remove()) : null);
-    (sourceTwo.peek() ? newQ.add(sourceTwos.remove()) : null);
+    (sourceTwo.peek() ? newQ.add(sourceTwo.remove()) : null);
   }
   return newQ;
 }
