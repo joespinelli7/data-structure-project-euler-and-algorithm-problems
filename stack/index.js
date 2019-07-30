@@ -13,7 +13,7 @@ class Stack {
   }
 
   push(record) {
-    return this.data.push(record);
+    this.data.push(record);
   }
 
   pop() {
