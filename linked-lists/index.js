@@ -1,4 +1,5 @@
-// Implement classes Node and Linked Lists. See 'directions' document.
+// Implement classes Node and Linked Lists. See 'directions.html' document for details on how classes handle
+// and methods should run.
 
 class Node {
   constructor(data, next = null) {
@@ -47,6 +48,10 @@ class LinkedList {
       }
       node = node.next;
     }
+  }
+
+  clear() {
+
   }
 
 }
