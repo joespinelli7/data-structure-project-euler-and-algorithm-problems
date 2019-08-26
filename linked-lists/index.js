@@ -32,4 +32,8 @@ class LinkedList {
     return this.head
   }
 
+  getLast() {
+
+  }
+
 }
