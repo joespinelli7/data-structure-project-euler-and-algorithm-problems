@@ -51,7 +51,9 @@ class LinkedList {
   }
 
   clear() {
-
+    // set this.head to null b/c nodes are connected through this.next in Node class. Therefore, if we set
+    // this.head to null, all nodes previously created in the LinkedList will be erased
+    this.head = null;
   }
 
 }
