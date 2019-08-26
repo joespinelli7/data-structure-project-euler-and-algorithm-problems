@@ -26,6 +26,10 @@ class LinkedList {
     }
 
     return counter;
-  } 
+  }
+
+  getFirst() {
+    
+  }
 
 }
