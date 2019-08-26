@@ -33,7 +33,20 @@ class LinkedList {
   }
 
   getLast() {
+    // checks if there is a node to begin with.
+    if (!this.head) {
+      return null;
+    }
 
+    // loops through nodes as long as next value is true, when value is false, signifies that is the final node
+    // and returns it
+    let node = this.head;
+    while (node) {
+      if (!node.next) {
+        return node;
+      }
+      node = node.next;
+    }
   }
 
 }
