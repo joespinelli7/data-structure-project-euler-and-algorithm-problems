@@ -26,6 +26,6 @@ class LinkedList {
     }
 
     return counter;
-  }
+  } 
 
 }
