@@ -57,6 +57,10 @@ class LinkedList {
   }
 
   removeFirst() {
+    // if: first check to see if this.head even exists, b/c if it doesn't, there's nothing to remove
+    // else: if we hit the else we know that at least this.head exists and therefore assign it
+    // it to the second node in the list using this.head.next
+    // to remove/delete an object, you remove any references to them therefore essentially deleting them.
     if (!this.head) {
       return;
     } else {
