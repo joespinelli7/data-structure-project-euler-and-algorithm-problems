@@ -57,7 +57,11 @@ class LinkedList {
   }
 
   removeFirst() {
-
+    if (!this.head) {
+      return;
+    } else {
+      this.head = this.head.next;
+    }
   }
 
 }
