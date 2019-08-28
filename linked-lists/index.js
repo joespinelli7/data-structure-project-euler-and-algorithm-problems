@@ -77,13 +77,13 @@ class LinkedList {
       return;
     }
 
-    // set a prevNode and nextNode. prevNode will always be node previous the nextNode and end up next value of null.
-    // check if nextNode.next is true which would mean the length is greater than 3 and therefore push both
+    // set a prevNode and nextNode. prevNode will always be node previous the nextNode and end up next value of null (last node).
+    // check if nextNode.next is true which would mean the length is at least 3 and therefore push both
     // variables down the node line. (prevNode takes nextNode place and nextNode moves down)
     let prevNode = this.head;
     // nextNode is simply just the whole next object from this.head
     let nextNode = this.head.next;
-    // line 79 calling the next object from the this.head.next object
+    // line 87 calling the next object from the this.head.next object
     while(nextNode.next) {
       prevNode = nextNode;
       nextNode = nextNode.next;
@@ -92,6 +92,10 @@ class LinkedList {
     // the final node is the list and therefore set the node previous to nextNode equal to null. Thereby
     // removing any reference to what would've been the final node in the list.
     prevNode.next = null;
+  }
+
+  insertLast() {
+    
   }
 
 }
