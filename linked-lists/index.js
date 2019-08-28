@@ -95,7 +95,15 @@ class LinkedList {
   }
 
   insertLast() {
-    
+    const last = this.getLast();
+    // if there is no head node, create a node in the this.head spot
+    // else, means there is at least 1 node in the chain and therefore grab the final node (using getLast()) and
+    // assign it to have a .next value of the new node data being passed in.
+    if (!this.head) {
+      this.head = new Node(data);
+    } else {
+      last.next = new Node(data);
+    }
   }
 
 }
