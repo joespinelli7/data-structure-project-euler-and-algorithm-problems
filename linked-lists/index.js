@@ -106,9 +106,9 @@ class LinkedList {
     }
   }
 
-  getAt(index) {
-    // check there are any nodes in the linkedlist
-    if (!this.head) {
+    getAt(index) {
+    // check there are any nodes in the linkedlist or if index requested does not exist in linkedlist
+    if (!this.head || this.size() < index) {
       return null;
     }
 
