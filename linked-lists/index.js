@@ -106,8 +106,8 @@ class LinkedList {
     }
   }
 
-  getAt() {
-    
+  getAt(index) {
+
   }
 
 }
