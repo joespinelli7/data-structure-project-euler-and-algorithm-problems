@@ -107,7 +107,24 @@ class LinkedList {
   }
 
   getAt(index) {
+    // check there are any nodes in the linkedlist
+    if (!this.head) {
+      return null;
+    }
 
+    // if there are nodes set node variable equal to the head node and create a counter index to find
+    // the node at the index the user is searching for.
+    let node = this.head;
+    let counterIndex = 0;
+
+    // check while the counter is less than the desired index, if so set node equal to the next node,
+    // if not, we've hit the desired index and can return the node to the user.
+    while (counterIndex < index) {
+      node = node.next;
+      counterIndex++;
+    }
+
+    return node;
   }
 
 }
