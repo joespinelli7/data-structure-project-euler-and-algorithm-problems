@@ -108,7 +108,7 @@ class LinkedList {
 
     getAt(index) {
     // check there are any nodes in the linkedlist or if index requested does not exist in linkedlist
-    if (!this.head || this.size() < index) {
+    if (!this.head || this.size() <= index) {
       return null;
     }
 
@@ -128,7 +128,23 @@ class LinkedList {
   }
 
   removeAt(index) {
+    // check there are any nodes in the linkedlist or if index requested does not exist in linkedlist
+    // REMEMBER: linkedlist is index like an array: [0, 1, 2, ...]
+    if (!this.head || this.size() <= index) {
+      return;
+    }
 
+    // next check if we want the first node, override it with its next node and thats it.
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
+    }
+
+    // assigning a value to the previous node of the node we are attempting to remove.
+    const prevNode = this.getAt(index - 1);
+    // assigning the the node previous to the node we are attempting to remove's next value to
+    // skip over its next value (therefore removing it) and assigning it to its next.next value.
+    prevNode.next = prevNode.next.next;
   }
 
 }
