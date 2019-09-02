@@ -127,8 +127,8 @@ class LinkedList {
     return node;
   }
 
-  removeAt(data, integer) {
-    
+  removeAt(index) {
+
   }
 
 }
