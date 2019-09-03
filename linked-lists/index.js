@@ -148,7 +148,26 @@ class LinkedList {
   }
 
   insertAt(data, index) {
-    
+    // check there are any nodes in the linkedlist and if not creates one
+    // else if, checks if index desired is 0, simply replace head node with new node
+    // passed in and assign its .next value as the current head node.
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    } else if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+
+    // to find node previous of our desired index
+    // checks if the desired index exists in list, grab it (getAt()), otherwise (or ||), means we're requesting
+    // index that is out of bounds and instead assign prevNode to the last node in the list
+    const prevNode = this.getAt(index - 1) || this.getLast();
+    // create new node with our passed in data and insert it between the prevNode and its former .next reference
+    // by assigning new nodes .next to its previous nodes .next
+    const newNode = new Node(data, prevNode.next);
+    // now completing the insertion by connecting prevNode.next's value to our newly created node
+    prevNode.next = newNode;
   }
 
 }
