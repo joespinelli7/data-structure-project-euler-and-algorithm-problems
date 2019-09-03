@@ -4,21 +4,44 @@
 // return 1. Write an efficient algorithm for the following assumptions: N is an integer within the range [1..100,000];
 // each element of array array is an integer within the range [−1,000,000..1,000,000].
 
-function solution(array) {
-    const answerArray = array.reduce((a,b)=>{
-        if (b < 0) {
-            return a;
-        }
-        a[b] = b;
-        return a
-    }, [])
-    if (answerArray.length === 0 ) {
-        return 1;
+function smallestPositiveInteger(array) {
+  let posIntArr = array.filter(int => int > -1 );
+  let smallestIntArr = [];
+
+  if (posIntArr.length === 0) {
+    return 1;
+  }
+
+  for(let i = 1; i < posIntArr.length; i++) {
+    if(posIntArr[i] - posIntArr[i-1] != 1) {
+      let posInt = posIntArr[i] - 1;
+      smallestIntArr.push(posInt);
     }
-    for (let i=1; i <answerArray.length; i++){
-       if (!(answerArray[i])) {
-           return i;
-        }
-    }
-    return answerArray.length;
+  }
+
+  if (smallestIntArr.length === 0) {
+    return Math.max(...posIntArr) + 1;
+  } else {
+    return Math.max(...smallestIntArr);
+  }
+
 }
+
+// function solution(array) {
+//     const answerArray = array.reduce((a,b)=>{
+//         if (b < 0) {
+//             return a;
+//         }
+//         a[b] = b;
+//         return a
+//     }, [])
+//     if (answerArray.length === 0 ) {
+//         return 1;
+//     }
+//     for (let i=1; i <answerArray.length; i++){
+//        if (!(answerArray[i])) {
+//            return i;
+//         }
+//     }
+//     return answerArray.length;
+// }
