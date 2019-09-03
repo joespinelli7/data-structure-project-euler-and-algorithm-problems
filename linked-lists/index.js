@@ -147,4 +147,8 @@ class LinkedList {
     prevNode.next = prevNode.next.next;
   }
 
+  insertAt(data, index) {
+    
+  }
+
 }
