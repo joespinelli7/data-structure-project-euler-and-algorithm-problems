@@ -180,5 +180,14 @@ class LinkedList {
       counter++;
     }
   }
-
+  
+  // this defines a generator function, w/ a key of Symbol.iterator.
+  // here, creating a for...of loop you can use for your linkedlist.
+  *[Symbol.iterator]() {
+    let node = this.head;
+    while(node) {
+      yield node;
+      node = node.next;
+    }
+  }
 }
