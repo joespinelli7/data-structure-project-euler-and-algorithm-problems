@@ -6,7 +6,8 @@
 // capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-  return str.split(' ').map(word => {
+  // regex expression covers case if there is more than one space of whitespace in between the words.
+  return str.replace(/\s\s+/g, ' ').split(' ').map(word => {
     return word[0].toUpperCase() + word.slice(1);
   })
   .join(' ');
