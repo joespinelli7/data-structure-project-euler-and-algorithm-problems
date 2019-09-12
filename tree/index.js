@@ -30,6 +30,7 @@ class Tree {
   }
 
   traverseBF(fn) {
+    // This allows user to iterate through an entire tree from left to right level by level.
     // create array w/ starting element of root value inside it.
     const arr = [this.root];
 
