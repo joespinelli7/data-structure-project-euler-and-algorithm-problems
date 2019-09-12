@@ -17,13 +17,13 @@ class Node {
 
   remove(data) {
     this.children = this.children.filter(node => {
-      return node.data !== data
+      return node.data !== data;
     });
   }
 }
 
 class Tree {
   constructor() {
-    this.root = null; 
+    this.root = null;
   }
 }
