@@ -16,6 +16,8 @@ class Node {
   }
 
   remove(data) {
+    // filters out all the nodes who's data doesn't match up with the data passed in therefore removing
+    // only the node we want to remove.
     this.children = this.children.filter(node => {
       return node.data !== data;
     });
@@ -28,6 +30,18 @@ class Tree {
   }
 
   traverseBF(fn) {
+    // create array w/ starting element of root value inside it.
+    const arr = [this.root];
 
+    // iterate over the array to check while something is in it.
+    while (arr.length) {
+      // shift() takes out first element in array.
+      const node = arr.shift();
+      // then take all of nodes children and push them into array we created.
+      // makes it so we're going level by level of tree (breadth first traversal).
+      arr.push(...node.children);
+      // returns node into function passed in so they can iterate over the entire tree.
+      fn(node);
+    }
   }
 }
