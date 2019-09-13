@@ -45,4 +45,8 @@ class Tree {
       fn(node);
     }
   }
+
+  traverseDF(fn) {
+
+  }
 }
