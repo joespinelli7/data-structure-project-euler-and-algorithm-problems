@@ -38,7 +38,7 @@ class Tree {
     while (arr.length) {
       // shift() takes out first element in array.
       const node = arr.shift();
-      // then take all of nodes children and push them into array we created.
+      // then take all of nodes children and push them into end of array we created.
       // makes it so we're going level by level of tree (breadth first traversal).
       arr.push(...node.children);
       // returns node into function passed in so they can iterate over the entire tree.
@@ -47,6 +47,19 @@ class Tree {
   }
 
   traverseDF(fn) {
+    // This allows user to iterate through an entire tree from left to right level by level.
+    // create array w/ starting element of root value inside it.
+    const arr = [this.root];
 
+    // iterate over the array to check while something is in it.
+    while (arr.length) {
+      // shift() takes out first element in array.
+      const node = arr.shift();
+      // then take all of nodes children and push them into start of array we created.
+      // makes it so we're going level by level of tree (breadth first traversal).
+      arr.unshift(...node.children);
+      // returns node into function passed in so they can iterate over the entire tree.
+      fn(node);
+    }
   }
 }
