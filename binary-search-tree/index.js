@@ -28,4 +28,8 @@ class Node {
       this.right = new Node(data);
     }
   }
+
+  contains(data) {
+    
+  }
 }
