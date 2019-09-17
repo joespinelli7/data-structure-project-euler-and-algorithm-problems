@@ -30,6 +30,21 @@ class Node {
   }
 
   contains(data) {
-    
+    // first check IF our data is equal to this.data then simply return this node.
+    // this.data will change upon each recursion if we go into left or right side of tree.
+    if (data === this.data) {
+      return this;
+    }
+
+    // now check IF data > this.data && this.right exists we want to go down right side of tree.
+    // same thing for left side.
+    if (data > this.data && this.right) {
+      return this.right.contains(data);
+    } else if (data < this.data && this.left) {
+      return this.left.contains(data);
+    }
+
+    // if nothing returns in the above code, then we don't have a match and in tree and therefore return null.
+    return null;
   }
 }
