@@ -1,4 +1,4 @@
-// Implement bubbleSort, selectionSort, and mergeSort
+// Implement bubbleSort, selectionSort, and mergeSort.
 
 function bubbleSort(arr) {
 
