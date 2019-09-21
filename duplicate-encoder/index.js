@@ -8,12 +8,20 @@
 // "(( @"     =>  "))(("
 
 function duplicateEncode(word){
-//   const wordArr = word.toLowerCase().split('');
+  const wordArr = word.toLowerCase().split('');
+  let characterCounter = {};
   let newStr = '';
 
-  for (let char of word.toLowerCase()) {
-    console.log(char)
+  for (let char of wordArr) {
+    (!characterCounter[char] ? characterCounter[char] = 1 : characterCounter[char]++);
   }
 
+  for (let char of wordArr) {
+    if (characterCounter[char] > 1) {
+      newStr = newStr + ")";
+    } else {
+      newStr = newStr + "(";
+    }
+  }
   return newStr;
 }
