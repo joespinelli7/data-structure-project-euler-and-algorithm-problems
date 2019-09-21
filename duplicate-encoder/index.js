@@ -7,6 +7,7 @@
 // "Success"  =>  ")())())"
 // "(( @"     =>  "))(("
 
+// my solution:
 function duplicateEncode(word){
   const wordArr = word.toLowerCase().split('');
   let characterCounter = {};
@@ -27,12 +28,12 @@ function duplicateEncode(word){
 }
 
 // efficient solution: (codewars)
-function duplicateEncode(word){
-  return word
-    .toLowerCase()
-    .split('')
-    .map( function (a, i, w) {
-      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
-    })
-    .join('');
-}
+// function duplicateEncode(word){
+//   return word
+//     .toLowerCase()
+//     .split('')
+//     .map( function (a, i, w) {
+//       return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+//     })
+//     .join('');
+// }
