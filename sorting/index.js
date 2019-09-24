@@ -44,6 +44,21 @@ function mergeSort(arr) {
 
 }
 
+// merge 2 sorted arrays(left, right) into 1 sorted array.
 function merge(left, right) {
+  const results = [];
 
+  while (left.length && right.length) {
+    if (left[0] < right[0]) {
+      // shift() will forcibly remove that element from the array and push it into results array.
+      results.push(left.shift());
+    } else {
+      results.push(right.shift());
+    }
+  }
+
+  // Joins any remaining elements from either left or right array to results array values.
+  // either left or right will be empty by the time the while loop ends so this is just to return
+  // any left over values from whichever array is not empty.
+  return [...results, ...left, ...right];
 }
