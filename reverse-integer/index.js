@@ -8,6 +8,11 @@
 //  reverseInt(-90) === -9
 
 function reverseInt(n) {
+  if (typeof n !== "number") {
+    alert("Numbers only please!");
+    return;
+  }
+
   let reversedString = n.toString().split('').reverse().join('');
   return parseInt(reversedString) * Math.sign(n);
 }
