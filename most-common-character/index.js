@@ -4,20 +4,23 @@
 // commonCharacter("apple 1231111") === "1"
 
 function maxChar(str) {
-  let characterCounter = {};
-  let highestN = 0;
-  let maxC = "";
+  const charCounter = {};
+  let maxC = '';
+  let highestNum = 0;
 
   for (let char of str) {
-    (characterCounter[char] ? characterCounter[char]++ : characterCounter[char] = 1)
+    charCounter[char] ? charCounter[char]++ : charCounter[char] = 1;
   }
 
-  for (let char in characterCounter) {
-    if (characterCounter[char] > highestN) {
-      highestN = characterCounter[char];
+  for (let char in charCounter) {
+    if (charCounter[char] === highestNum) {
+      maxC = 'There is no single character used more than all others in string provided.'
+    } else if (charCounter[char] > highestNum) {
       maxC = char;
+      highestNum = charCounter[char];
     }
   }
+
   return maxC;
 }
 
